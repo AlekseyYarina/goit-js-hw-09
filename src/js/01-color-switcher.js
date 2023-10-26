@@ -10,6 +10,8 @@ const refs = {
   stopBtn: document.querySelector('[data-stop]'),
 };
 let isActive = false;
+refs.stopBtn.setAttribute('disabled', "")
+
 refs.startBtn.addEventListener('click', () => {
   if (isActive) {
     return;
@@ -17,11 +19,15 @@ refs.startBtn.addEventListener('click', () => {
   timerId = setInterval(() => {
     refs.bodyColor.style.backgroundColor = randomColor();
     isActive = true
+    refs.startBtn.setAttribute('disabled', "")
+    refs.stopBtn.removeAttribute('disabled')
   }, 1000);
 });
 
 refs.stopBtn.addEventListener('click', () => {
   clearInterval(timerId);
   isActive = false;
+  refs.startBtn.removeAttribute('disabled')
+  refs.stopBtn.setAttribute('disabled', "")
   console.log(`Interval with id ${timerId} has stopped!`);
 });
