@@ -1,2 +1,0 @@
-const t={bodyColor:document.querySelector("body"),startBtn:document.querySelector("[data-start]"),stopBtn:document.querySelector("[data-stop]")};let e=!1;t.startBtn.addEventListener("click",(()=>{e||(timerId=setInterval((()=>{t.bodyColor.style.backgroundColor=`#${Math.floor(16777215*Math.random()).toString(16).padStart(6,0)}`,e=!0}),1e3))})),t.stopBtn.addEventListener("click",(()=>{clearInterval(timerId),e=!1,console.log(`Interval with id ${timerId} has stopped!`)}));
-//# sourceMappingURL=01-color-switcher.ccd40139.js.map
