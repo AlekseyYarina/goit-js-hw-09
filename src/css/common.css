@@ -16,3 +16,56 @@ img {
   display: block;
   max-width: 100%;
 }
+
+/* -------------task-01------------- */
+
+button[data-start], button[data-stop]{
+  padding: 15px 25px;
+  font-size: 18px;
+  background-color: #0077b3; 
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+button[data-start]:hover, button[data-stop]:hover {
+  background-color: #005599; 
+}
+
+/* -------------task-02------------- */
+
+#datetime-picker {
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-bottom: 2px solid #0077b3; /* Синьо-голубий колір */
+  outline: none;
+  background: transparent;
+  color: #333;
+  transition: border-bottom 0.3s ease;
+}
+
+#datetime-picker::placeholder {
+  color: #0077b3; 
+}
+
+.timer {
+  display: flex;
+  font-size: 60px; 
+  font-weight: bold;
+  color: #0077b3; 
+  margin-top: 20px;
+}
+
+.field {
+  text-align: center;
+  margin: 0 20px;
+}
+
+.label {
+  font-size: 16px; 
+  color: #667;
+}
