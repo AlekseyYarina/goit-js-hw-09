@@ -10,7 +10,7 @@ const refs = {
   stopBtn: document.querySelector('[data-stop]'),
 };
 let isActive = false;
-refs.stopBtn.disabled = true; // Установка кнопки как неактивной
+refs.stopBtn.disabled = true; 
 
 refs.startBtn.addEventListener('click', () => {
   if (isActive) {
@@ -19,15 +19,15 @@ refs.startBtn.addEventListener('click', () => {
   timerId = setInterval(() => {
     refs.bodyColor.style.backgroundColor = randomColor();
     isActive = true;
-    refs.startBtn.disabled = true; // Установка кнопки "Start" как неактивной
-    refs.stopBtn.disabled = false; // Удаление неактивного состояния кнопки "Stop"
+    refs.startBtn.disabled = true; 
+    refs.stopBtn.disabled = false; "Stop"
   }, 1000);
 });
 
 refs.stopBtn.addEventListener('click', () => {
   clearInterval(timerId);
   isActive = false;
-  refs.startBtn.disabled = false; // Удаление неактивного состояния кнопки "Start"
-  refs.stopBtn.disabled = true; // Установка кнопки "Stop" как неактивной
+  refs.startBtn.disabled = false; "Start"
+  refs.stopBtn.disabled = true; 
   console.log(`Интервал с идентификатором ${timerId} остановлен!`);
 });
