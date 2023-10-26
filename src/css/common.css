@@ -19,7 +19,8 @@ img {
 
 /* -------------task-01------------- */
 
-button[data-start], button[data-stop]{
+button[data-start], 
+button[data-stop]{
   padding: 15px 25px;
   font-size: 18px;
   background-color: #0077b3; 
@@ -31,8 +32,16 @@ button[data-start], button[data-stop]{
   margin-top: 20px;
 }
 
-button[data-start]:hover, button[data-stop]:hover {
+button[data-start]:hover, 
+button[data-stop]:hover {
   background-color: #005599; 
+}
+
+button[data-start]:disabled,
+button[data-stop]:disabled {
+  background-color: #ccc; 
+  color: #888; 
+  cursor: not-allowed; 
 }
 
 /* -------------task-02------------- */
