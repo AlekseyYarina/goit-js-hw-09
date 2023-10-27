@@ -8,22 +8,22 @@ const options = {
   minuteIncrement: 1,
 };
 
-const datepicker = flatpickr("#datetime-picker", options);
+const datepicker = flatpickr('#datetime-picker', options);
 
-
-datepicker.config.onChange.push((selectedDates) => {
+datepicker.config.onChange.push(selectedDates => {
   const selectedDate = selectedDates[0];
 
   if (selectedDate < new Date()) {
-    window.alert("Please choose a date in the future");
-    document.querySelector("button[data-start]").disabled = true;
+    window.alert('Please choose a date in the future');
+    document.querySelector('button[data-start]').disabled = true;
   } else {
-    document.querySelector("button[data-start]").disabled = false;
+    document.querySelector('button[data-start]').disabled = false;
   }
 });
 
-
-document.querySelector("button[data-start]").addEventListener("click", startCountdown);
+document
+  .querySelector('button[data-start]')
+  .addEventListener('click', startCountdown);
 
 let countdownInterval;
 
@@ -39,7 +39,7 @@ function startCountdown() {
 
       if (timeRemaining <= 0) {
         clearInterval(countdownInterval);
-        alert("Countdown has finished!");
+        alert('Countdown has finished!');
         resetTimerDisplay();
       } else {
         updateTimerDisplay(timeRemaining);
@@ -49,21 +49,22 @@ function startCountdown() {
 }
 
 function resetTimerDisplay() {
-
-  document.querySelector("span[data-days]").textContent = "00";
-  document.querySelector("span[data-hours]").textContent = "00";
-  document.querySelector("span[data-minutes]").textContent = "00";
-  document.querySelector("span[data-seconds]").textContent = "00";
+  document.querySelector('span[data-days]').textContent = '00';
+  document.querySelector('span[data-hours]').textContent = '00';
+  document.querySelector('span[data-minutes]').textContent = '00';
+  document.querySelector('span[data-seconds]').textContent = '00';
 }
 
 function updateTimerDisplay(timeRemaining) {
   const { days, hours, minutes, seconds } = convertMs(timeRemaining);
 
-
-  document.querySelector("span[data-days]").textContent = addLeadingZero(days);
-  document.querySelector("span[data-hours]").textContent = addLeadingZero(hours);
-  document.querySelector("span[data-minutes]").textContent = addLeadingZero(minutes);
-  document.querySelector("span[data-seconds]").textContent = addLeadingZero(seconds);
+  document.querySelector('span[data-days]').textContent = addLeadingZero(days);
+  document.querySelector('span[data-hours]').textContent =
+    addLeadingZero(hours);
+  document.querySelector('span[data-minutes]').textContent =
+    addLeadingZero(minutes);
+  document.querySelector('span[data-seconds]').textContent =
+    addLeadingZero(seconds);
 }
 
 function convertMs(ms) {

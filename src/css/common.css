@@ -19,11 +19,11 @@ img {
 
 /* -------------task-01------------- */
 
-button[data-start], 
-button[data-stop]{
+button[data-start],
+button[data-stop] {
   padding: 15px 25px;
   font-size: 18px;
-  background-color: #0077b3; 
+  background-color: #0077b3;
   color: #fff;
   border: none;
   border-radius: 50px;
@@ -32,16 +32,16 @@ button[data-stop]{
   margin-top: 20px;
 }
 
-button[data-start]:hover, 
+button[data-start]:hover,
 button[data-stop]:hover {
-  background-color: #005599; 
+  background-color: #005599;
 }
 
 button[data-start]:disabled,
 button[data-stop]:disabled {
-  background-color: #ccc; 
-  color: #888; 
-  cursor: not-allowed; 
+  background-color: #ccc;
+  color: #888;
+  cursor: not-allowed;
 }
 
 /* -------------task-02------------- */
@@ -50,7 +50,7 @@ button[data-stop]:disabled {
   padding: 15px;
   font-size: 18px;
   border: none;
-  border-bottom: 2px solid #0077b3; 
+  border-bottom: 2px solid #0077b3;
   outline: none;
   background: transparent;
   color: #333;
@@ -58,14 +58,14 @@ button[data-stop]:disabled {
 }
 
 #datetime-picker::placeholder {
-  color: #0077b3; 
+  color: #0077b3;
 }
 
 .timer {
   display: flex;
-  font-size: 60px; 
+  font-size: 60px;
   font-weight: bold;
-  color: #0077b3; 
+  color: #0077b3;
   margin-top: 20px;
 }
 
@@ -75,6 +75,48 @@ button[data-stop]:disabled {
 }
 
 .label {
-  font-size: 16px; 
+  font-size: 16px;
   color: #667;
+}
+
+/* -------------task-03------------- */
+
+.form {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.form input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+
+.form button[type="submit"] {
+  padding: 15px 25px;
+  font-size: 18px;
+  background-color: #0077b3;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.form button[type="submit"]:hover {
+  background-color: #005599;
 }
