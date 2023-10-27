@@ -10,6 +10,7 @@ const refs = {
   stopBtn: document.querySelector('[data-stop]'),
 };
 let isActive = false;
+let timerId;
 refs.stopBtn.disabled = true;
 
 refs.startBtn.addEventListener('click', () => {
