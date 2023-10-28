@@ -11,7 +11,6 @@ const refs = {
 };
 let isActive = false;
 let timerId;
-refs.stopBtn.disabled = true;
 
 refs.startBtn.addEventListener('click', () => {
   if (isActive) {

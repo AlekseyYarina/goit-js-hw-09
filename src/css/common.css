@@ -22,9 +22,22 @@ img {
 .buttons {
   display: flex;
   justify-content: center;
+  gap: 10px;
 }
 
-button[data-start],
+button[data-start] {
+  padding: 15px 25px;
+  font-size: 18px;
+  background-color: #0077b3;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+
 button[data-stop] {
   padding: 15px 25px;
   font-size: 18px;
