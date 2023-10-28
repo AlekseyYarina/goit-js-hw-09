@@ -30,7 +30,7 @@ refs.stopBtn.addEventListener('click', () => {
   clearInterval(timerId);
   isActive = false;
   refs.startBtn.disabled = false;
-  ('Start');
+  // ('Start');
   refs.stopBtn.disabled = true;
   console.log(`Интервал с идентификатором ${timerId} остановлен!`);
 });
