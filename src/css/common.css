@@ -63,16 +63,28 @@ button[data-stop]:disabled {
 }
 
 /* -------------task-02------------- */
+.start{
+  display: flex;
+  gap: 10px;
+}
 
 #datetime-picker {
   padding: 15px;
   font-size: 18px;
-  border: none;
-  border-bottom: 2px solid #0077b3;
+  border: 2px solid #0077b3;
+  border-radius: 4px;
   outline: none;
   background: transparent;
   color: #333;
   transition: border-bottom 0.3s ease;
+}
+
+#datetime-picker:disabled{
+  background-color: #f5f5f5; 
+  color: #999;
+  border: 2px solid #ccc; 
+  border-radius: 4px; 
+  cursor: not-allowed;
 }
 
 #datetime-picker::placeholder {
