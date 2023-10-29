@@ -27,6 +27,9 @@ refs.form.addEventListener('submit', function (e) {
         );
       });
   }
+  refs.delayInput.value = '';
+  refs.stepInput.value = '';
+  refs.amountInput.value = '';
 });
 
 function createPromise(position, delay) {
