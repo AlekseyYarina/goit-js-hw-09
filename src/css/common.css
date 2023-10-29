@@ -37,7 +37,6 @@ button[data-start] {
   margin-top: 20px;
 }
 
-
 button[data-stop] {
   padding: 15px 25px;
   font-size: 18px;
@@ -63,7 +62,7 @@ button[data-stop]:disabled {
 }
 
 /* -------------task-02------------- */
-.start{
+.start {
   display: flex;
   gap: 10px;
 }
@@ -79,11 +78,11 @@ button[data-stop]:disabled {
   transition: border-bottom 0.3s ease;
 }
 
-#datetime-picker:disabled{
-  background-color: #f5f5f5; 
+#datetime-picker:disabled {
+  background-color: #f5f5f5;
   color: #999;
-  border: 2px solid #ccc; 
-  border-radius: 4px; 
+  border: 2px solid #ccc;
+  border-radius: 4px;
   cursor: not-allowed;
 }
 
@@ -118,6 +117,44 @@ button[data-stop]:disabled {
   color: #667;
 }
 
+@keyframes countIncrease {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  25% {
+    transform: scale(1.15);
+    opacity: 0.85;
+  }
+}
+
+@keyframes countDecrease {
+  75% {
+    transform: scale(1.15);
+    opacity: 0.85;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.value {
+  display: inline-block;
+  font-size: 60px;
+  font-weight: bold;
+  color: #0077b3;
+  margin-top: 20px;
+}
+
+.increase {
+  animation: countIncrease 0.25s ease-in-out;
+}
+
+.decrease {
+  animation: countDecrease 0.75s ease-in-out;
+}
+
 /* -------------task-03------------- */
 
 .form {
@@ -128,31 +165,6 @@ button[data-stop]:disabled {
   max-width: 400px;
   margin: 0 auto;
 }
-
-/* .form {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  max-width: 400px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-} */
-/* .form {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  max-width: 400px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-} */
 
 .form label {
   display: block;

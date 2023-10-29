@@ -66,13 +66,24 @@ function resetTimerDisplay() {
 function updateTimerDisplay(timeRemaining) {
   const { days, hours, minutes, seconds } = convertMs(timeRemaining);
 
-  document.querySelector('span[data-days]').textContent = addLeadingZero(days);
-  document.querySelector('span[data-hours]').textContent =
-    addLeadingZero(hours);
-  document.querySelector('span[data-minutes]').textContent =
-    addLeadingZero(minutes);
-  document.querySelector('span[data-seconds]').textContent =
-    addLeadingZero(seconds);
+  updateElementWithAnimation('data-days', days);
+  updateElementWithAnimation('data-hours', hours);
+  updateElementWithAnimation('data-minutes', minutes);
+  updateElementWithAnimation('data-seconds', seconds);
+}
+
+function updateElementWithAnimation(dataAttribute, value) {
+  const element = document.querySelector(`span[${dataAttribute}]`);
+  const currentValue = parseInt(element.textContent);
+
+  if (value !== currentValue) {
+    const className = value > currentValue ? 'increase' : 'decrease';
+
+    element.classList.remove('increase', 'decrease');
+    void element.offsetWidth;
+    element.textContent = addLeadingZero(value);
+    element.classList.add(className);
+  }
 }
 
 function convertMs(ms) {
